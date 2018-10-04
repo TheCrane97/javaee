@@ -1,1 +1,1 @@
-# javaee
+# Paulina Żurawska
