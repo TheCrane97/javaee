@@ -18,8 +18,8 @@ public class Menu extends HttpServlet {
         PrintWriter out = response.getWriter();
 
         out.println("<html><body><div>"
-        		+ "<div><a href='/servletjspdemo/date'>Date</a></div>"
-        		+ "<div><a href='/servletjspdemo/about'>About</a></div>"
+        		+ "<div><a href='/zad02/date'>Date</a></div>"
+        		+ "<div><a href='/zad02/about'>About</a></div>"
         		+ "</div></body></html>");
     }
 }
