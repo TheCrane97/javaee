@@ -1,0 +1,39 @@
+# use glob syntax.
+syntax: glob
+*.class
+*~
+*.bak
+*.old
+*.pdf
+
+# logs
+*.log
+
+# eclipse conf file
+.settings
+.settings/
+.classpath
+.project
+.springBeans
+
+
+# building
+target
+tmp*
+dist
+test-output
+
+# other scm
+.svn
+.CVS
+.hg*
+
+# switch to regexp syntax.
+#  syntax: regexp
+#  ^\.pc/
+
+
+.idea/compiler.xml
+.idea/misc.xml
+.idea/vcs.xml
+.idea/workspace.xml
