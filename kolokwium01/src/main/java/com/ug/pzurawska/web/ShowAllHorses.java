@@ -82,7 +82,7 @@ public class ShowAllHorses extends HttpServlet {
 			
 		}
 		
-		out.append("<a href='/zad04/start'>Przejdz do Start</a></body></html>");
+		out.append("<a href='/kolokwium01/start'>Przejdz do Start</a></body></html>");
 		out.close();
 	}
 	

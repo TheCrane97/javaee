@@ -4,11 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.ug.pzurawska.domain.Horse;
+import com.ug.pzurawska.domain.User;
 
 public class StorageService {
 	
 	private List<Horse> db = new ArrayList<Horse>();
 	private List<Horse> basket = new ArrayList<Horse>();
+	private List<User> user = new ArrayList<User>();
 	
 	public void add(Horse horse){
 		Horse newhorse = new Horse(horse.getName(),horse.getRace(),horse.getDateOfBirth(),horse.isDoesSick(),horse.getWeight());
@@ -42,4 +44,12 @@ public class StorageService {
 		return null;
 	}
 
+	
+	public void addUser(User person){
+		user.add(person);
+	}
+	
+	public List<User> getAllUsers(){
+		return user;
+	}
 }

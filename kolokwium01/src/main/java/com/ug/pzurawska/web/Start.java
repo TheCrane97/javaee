@@ -26,9 +26,10 @@ public class Start extends HttpServlet {
 	        out.println("<html><body><h1>Sklep Koni</h1> <br>" +
 	                "Menu: <br>" +
 	                "<ul>" +
-	                "<li><a href='/zad04/addHorse'>Dodaj Konia</a></li>" +
-	                "<li><a href='/zad04/showHorses'>Wyswietl Konie</a></li>" +
-	                "<li><a href='/zad04/showBasket'>Twoj Koszyk</a></li>" +
+	                "<li><a href='/kolokwium01/addHorse'>Dodaj Konia</a></li>" +
+	                "<li><a href='/kolokwium01/showHorses'>Wyswietl Konie</a></li>" +
+	                "<li><a href='/kolokwium01/showBasket'>Twoj Koszyk</a></li>" +
+	                "<li><a href='/kolokwium01/newsletter'>Zamow magazyn!</a></li>" +
 	                "</ul>" +
 	                "</body></html>");
 	        out.close();

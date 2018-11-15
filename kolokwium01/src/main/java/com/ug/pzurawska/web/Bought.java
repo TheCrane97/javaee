@@ -18,6 +18,6 @@ public class Bought extends HttpServlet{
 		response.setContentType("text/html");	
 		PrintWriter out = response.getWriter();
 	
-		out.append("<html><body><h1>Kupiono Konie!!</h1><br><a href='/zad04/start'>Przejdz do Start</a></body></html>");
+		out.append("<html><body><h1>Kupiono Konie!!</h1><br><a href='/kolokwium01/start'>Przejdz do Start</a></body></html>");
 	}
 }

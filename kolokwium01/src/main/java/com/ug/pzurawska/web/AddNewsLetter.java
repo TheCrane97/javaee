@@ -23,21 +23,21 @@ public class AddNewsLetter extends HttpServlet {
 				"<form action='shownewsletter'>" +
 				"Imie: <input type='text' name='name' /> <br />" +
 				"Nazwisko: <input type='text' name='surname' /> <br />" +
-				"Kiedy wysylac? Wpisz daty (yyyy-mm-dd):" +
+				"Kiedy wysylac? Wpisz daty (yyyy-mm-dd):<br />" +
 				"Od: <input type='text' name='beginDate' /> <br />" +
 				"Do: <input type='text' name='endDate' /> <br />" +
-				"Jaka czestotliwosc?:" +
-				"<input type='radio' name='frequency' value='everyDay'> Codziennie<br>" + 
-				"<input type='radio' name='frequency' value='everyWeek'> Tygodniowo<br>" + 
-				"<input type='radio' name='frequency' value='everyMonth'> Miesiecznie<br>"+
-				"Ktore magazyny wybierasz?"+
-				"<input type='checkbox' name='newsLetter' value='allHorses'> Wszystko o koniach<br>"+
-				"<input type='checkbox' name='newsLetter' value='horseFriend'> Kon twoj przyjaciel<br>"+
-				"<input type='checkbox' name='newsLetter' value='careOfHorse'> Jak opiekowac sie konmi<br>"+
-				"<input type='checkbox' name='newsLetter' value='whichHorse'> Ktorego konia wybrac<br>"+
+				"Jaka czestotliwosc?:<br />" +
+				"<input type='radio' name='frequency' value='Codziennie'> Codziennie<br>" + 
+				"<input type='radio' name='frequency' value='Tygodniowo'> Tygodniowo<br>" + 
+				"<input type='radio' name='frequency' value='Miesiecznie'> Miesiecznie<br>"+
+				"Ktore magazyny wybierasz?<br />"+
+				"<input type='checkbox' name='newsLetter01' value='Wszystko o koniach'> Wszystko o koniach<br>"+
+				"<input type='checkbox' name='newsLetter02' value='Kon twoj przyjaciel'> Kon twoj przyjaciel<br>"+
+				"<input type='checkbox' name='newsLetter03' value='Jak opiekowac sie konmi'> Jak opiekowac sie konmi<br>"+
+				"<input type='checkbox' name='newsLetter04' value='Ktorego konia wybrac'> Ktorego konia wybrac<br>"+
 				"<input type='submit' value=' Zamawiam ' /><br/>" +
 				"</form>" +
-				"<a href='/zad04/start'>Przejdz do Start</a></body></html>");
+				"<a href='/kolokwium01/start'>Przejdz do Start</a></body></html>");
 		out.close();
 	}
 

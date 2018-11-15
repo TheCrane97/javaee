@@ -32,7 +32,7 @@ public class AddHorse extends HttpServlet {
 				"</select><br />" +
 				"<input type='submit' value=' Dodaj ' /><br/>" +
 				"</form>" +
-				"<a href='/zad04/start'>Przejdz do Start</a></body></html>");
+				"<a href='/kolokwium01/start'>Przejdz do Start</a></body></html>");
 		out.close();
 	}
 }
