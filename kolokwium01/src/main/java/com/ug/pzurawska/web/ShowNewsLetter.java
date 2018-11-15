@@ -53,7 +53,7 @@ public class ShowNewsLetter extends HttpServlet{
 			
 			if(request.getParameter("newsLetter01")!=null)
 			{
-				person.addMagazineToList(request.getParameter("newsLetter02"));
+				person.addMagazineToList(request.getParameter("newsLetter01"));
 			}
 			
 			if(request.getParameter("newsLetter02")!=null)
@@ -62,11 +62,11 @@ public class ShowNewsLetter extends HttpServlet{
 			}
 			if(request.getParameter("newsLetter03")!=null)
 			{
-				person.addMagazineToList(request.getParameter("newsLetter02"));
+				person.addMagazineToList(request.getParameter("newsLetter03"));
 			}
 			if(request.getParameter("newsLetter04")!=null)
 			{
-				person.addMagazineToList(request.getParameter("newsLetter02"));
+				person.addMagazineToList(request.getParameter("newsLetter04"));
 			}
 			
 			StorageService ss = (StorageService) getServletContext().getAttribute("storage_service");
@@ -83,14 +83,15 @@ public class ShowNewsLetter extends HttpServlet{
 				out.append("<p>Data poczatkowa: " + user.getBeginDate() + "</p>");
 				out.append("<p>Data koncowa: " + user.getEndDate() + "</p>");
 				out.append("<p>Czestotliwosc: " + user.getFrequency() + "</p>");
+				out.append("<p>Magazyny:</p>");
 				magazines = user.getMagazine();
 				for(String magazine: magazines)
 				{
-					out.append("<p>Magazyn: " + magazine + "</p>");
+					out.append("<p> " + magazine + "</p>");
 				}
 				
 				
-				out.append("----------------------------------------------------------------------------------");
+				out.append("----------------------------------------------------------------------------------<br>");
 			}
 		
 		}else
@@ -108,14 +109,15 @@ public class ShowNewsLetter extends HttpServlet{
 				out.append("<p>Data poczatkowa: " + user.getBeginDate() + "</p>");
 				out.append("<p>Data koncowa: " + user.getEndDate() + "</p>");
 				out.append("<p>Czestotliwosc: " + user.getFrequency() + "</p>");
+				out.append("<p>Magazyny:</p>");
 				magazines = user.getMagazine();
 				for(String magazine: magazines)
 				{
-					out.append("<p>Magazyn: " + magazine + "</p>");
+					out.append("<p>" + magazine + "</p>");
 				}
 				
 				
-				out.append("----------------------------------------------------------------------------------");
+				out.append("----------------------------------------------------------------------------------<br>");
 			}
 			
 			

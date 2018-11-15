@@ -20,7 +20,7 @@ public class AddNewsLetter extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		
 		out.println("<html><body><h2>Moze jakies magazyny?<br> Podaj swoje dane:</h2>" +
-				"<form action='shownewsletter'>" +
+				"<form action='allnewsletter'>" +
 				"Imie: <input type='text' name='name' /> <br />" +
 				"Nazwisko: <input type='text' name='surname' /> <br />" +
 				"Kiedy wysylac? Wpisz daty (yyyy-mm-dd):<br />" +
