@@ -2,7 +2,6 @@ package com.example.pzurawska.zad05.domain;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
-import com.example.restwsdemo.domain.Person;
 
 import java.util.Date;
 
