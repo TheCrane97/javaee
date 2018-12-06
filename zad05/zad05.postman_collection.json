@@ -1,0 +1,171 @@
+{
+	"info": {
+		"_postman_id": "e2c656ac-6b2f-4101-ac9f-18d1676119b4",
+		"name": "zad05",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "RestZad05SmokeTest",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/zad05/api/horse/test",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"zad05",
+						"api",
+						"horse",
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "dodawanieKonia",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Witekk\",\n\t\"race\": \"syryjski\",\n\t\"dateOfBirth\": \"2014-05-05\",\n\t\"doesSick\": false,\n\t\"weight\": 500.5\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/zad05/api/horse",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"zad05",
+						"api",
+						"horse"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "wyswietlenieWszystkichKoni",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/zad05/api/horse",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"zad05",
+						"api",
+						"horse"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "wyswietlrnieKonkretnegoKonia",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/zad05/api/horse/Maciek",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"zad05",
+						"api",
+						"horse",
+						"Maciek"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "usuwanieKoni",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/zad05/api/horse",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"zad05",
+						"api",
+						"horse"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
