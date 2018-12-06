@@ -1,11 +1,7 @@
 package com.example.pzurawska.zad05.service;
 
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Date;
 import java.util.List;
 
 import javax.ejb.Singleton;
@@ -34,7 +30,7 @@ public class HorseManager {
 				return horse;
 			
 		}
-		return new Horse("Nie znaleziono konia", "Nie znaleziono konia", DateOf("0000-00-00"), false, 0);
+		return new Horse("Nie znaleziono konia", "Nie znaleziono konia", "0000-00-00", false, 0);
 	}
 	
 	public List<Horse> getAllHorses(){
@@ -45,16 +41,4 @@ public class HorseManager {
 		db.clear();
 	}
 	
-	public static Date DateOf(String date)
-	{
-		DateFormat formatter = new SimpleDateFormat("yyyy-mm-dd");
-		Date dateOfBirth = null;
-		try {
-			dateOfBirth = formatter.parse(date);
-		} catch (ParseException e) {
-			e.printStackTrace();
-		}
-		return dateOfBirth;
-	}
-
 }

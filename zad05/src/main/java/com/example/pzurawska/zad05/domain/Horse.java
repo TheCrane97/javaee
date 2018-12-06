@@ -2,7 +2,9 @@ package com.example.pzurawska.zad05.domain;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
-
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 @XmlRootElement
@@ -14,6 +16,8 @@ public class Horse {
 	private boolean doesSick;
 	private double weight;
 	
+	public Horse(){}
+	
 	public Horse(String name, String race, Date dateOfBirth, boolean doesSick, double weight) {
 		super();
 		this.name = name;
@@ -21,6 +25,23 @@ public class Horse {
 		this.dateOfBirth = dateOfBirth;
 		this.doesSick = doesSick;
 		this.weight = weight;
+	}
+	
+	
+	public Horse(String name, String race, String date, boolean doesSick, double weight) {
+		super();
+		this.name = name;
+		this.race = race;
+		this.doesSick = doesSick;
+		this.weight = weight;
+		
+		DateFormat formatter = new SimpleDateFormat("yyyy-mm-dd");
+		this.dateOfBirth = null;
+		try {
+			dateOfBirth = formatter.parse(date);
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
 	}
 
 	public String getName() {

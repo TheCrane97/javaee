@@ -44,7 +44,6 @@ public class HorseRESTService {
 	@Consumes(MediaType.APPLICATION_JSON)
 	public Response addHorse(Horse horse) {
 		hm.addHorse(horse);
-
 		return Response.status(201).entity("Horse").build();
 	}
 
