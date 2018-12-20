@@ -9,6 +9,7 @@ import com.ug.pzurawska.domain.Bottle;
 public class StorageService {
 	
 	private List<Bottle> db = new ArrayList<Bottle>();
+	private List<Bottle> koszyk = new ArrayList<Bottle>();
 	
 	public void Add(Bottle bottle){
 		db.add(bottle);
@@ -17,6 +18,10 @@ public class StorageService {
 	
 	public List<Bottle> GetAll(){
 		return db;
+	}
+	
+	public List<Bottle> GetAllZKoszyk(){
+		return koszyk;
 	}
 	
 
@@ -30,4 +35,11 @@ public class StorageService {
 		 return null;
 		
 	}
+	
+	public void AddToKoszyk(Bottle bottle){
+		db.add(bottle);
+	}
+	
+	
+	
 }
