@@ -15,19 +15,19 @@
 <jsp:useBean id="wszystkieDane" class="com.ug.pzurawska.service.StorageService" scope="application"/>
 
 <jsp:setProperty property="nazwa" param="nazwa" name="dane" />
-<jsp:setProperty property="poejmnosc" param="pojemnosc" name="dane" />
+
 <jsp:setProperty property="coWsrodku" param="coWsrodku" name="dane" />
 <jsp:setProperty property="naklejki" param="naklejki" name="dane" />
 
 <body>
 <%
-if(dane.getNazwa()!=null && dane.getDataProdukcji()!=null && dane.getPojemnosc()!=0.0 && dane.getCoWsrodku()!=null && dane.getNaklejki()!=null)
-	{
+
+dane.setNazwa(request.getParameter("nazwa"));
 		DateFormat format = new SimpleDateFormat("yyyy-MM-dd");
-		Date dataProd = format.parse(request.getParameter("dataProddukcji"));
+		Date dataProd = format.parse(request.getParameter("dataProdukcji"));
 		
 		
-		dane.setNazwa(request.getParameter("nazwa"));
+		
 		dane.setDataProdukcji(dataProd);
 		
 		dane.setPojemnosc(Double.parseDouble(request.getParameter("pojemnosc")));
@@ -57,10 +57,7 @@ if(dane.getNazwa()!=null && dane.getDataProdukcji()!=null && dane.getPojemnosc()
 			" Co jest w srodku: "+dane.getCoWsrodku() +"<br>"+
 			" Naklejki: "+dane.getNaklejki() +
 				"");
-		
-	}else
-		out.println("Nie udalo sie dodac do bazy");
-	
+
 	
 	
 	%>

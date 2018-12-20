@@ -12,7 +12,7 @@ public class Bottle {
 	
 	
 	
-	public Bottle(String nazwa, Date dataProdukcji, double pojemnosc, String coWsrodku, String naklkejki) {
+	public Bottle(String nazwa, Date dataProdukcji, double pojemnosc, String coWsrodku, String naklejki) {
 		super();
 		this.nazwa = nazwa;
 		this.dataProdukcji = dataProdukcji;

@@ -15,13 +15,15 @@
 <body>
 <%
 	for(Bottle news:wszystkieDane.GetAll())
-	{
+	{	
+	
 		out.println("Imie:"+news.getNazwa()+"<br>");
 		out.println("Od:"+news.getDataProdukcji()+"<br>");
 		out.println("Pojemnosc:"+news.getPojemnosc()+"<br>");
 		out.println("Co jest w srodku:"+news.getCoWsrodku()+"<br>");
 		out.println("Naklejki:"+news.getNaklejki()+"<br>");
 		out.println("---------------------------"+"<br>");
+	
 	}
 %>
 
