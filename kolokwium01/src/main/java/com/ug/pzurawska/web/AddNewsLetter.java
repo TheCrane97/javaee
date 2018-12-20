@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 @WebServlet("/newsletter")
 public class AddNewsLetter extends HttpServlet {
@@ -16,16 +17,32 @@ public class AddNewsLetter extends HttpServlet {
 			throws ServletException, IOException {
 		
 		response.setContentType("text/html");
+		HttpSession session = request.getSession();
+		
+		String name="",surname="",beginDate="",endDate="";
+		
+		if(session.getAttribute("sess_news.name")!=null)
+			name = (String) session.getAttribute("sess_news.name");
+		
+		if(session.getAttribute("sess_news.surname")!=null)
+			surname = (String) session.getAttribute("sess_news.surname");
+		
+		if(session.getAttribute("sess_news.beginDate")!=null)
+			beginDate = (String) session.getAttribute("sess_news.beginDate");
+		
+		if(session.getAttribute("sess_news.endDate")!=null)
+			endDate = (String) session.getAttribute("sess_news.endDate");
+		
 		
 		PrintWriter out = response.getWriter();
 		
 		out.println("<html><body><h2>Moze jakies magazyny?<br> Podaj swoje dane:</h2>" +
 				"<form action='allnewsletter'>" +
-				"Imie: <input type='text' name='name' /> <br />" +
-				"Nazwisko: <input type='text' name='surname' /> <br />" +
+				"Imie: <input type='text' name='name' value='"+name+"' /> <br />" +
+				"Nazwisko: <input type='text' name='surname' value='"+surname+"' /> <br />" +
 				"Kiedy wysylac? Wpisz daty (yyyy-mm-dd):<br />" +
-				"Od: <input type='text' name='beginDate' /> <br />" +
-				"Do: <input type='text' name='endDate' /> <br />" +
+				"Od: <input type='text' name='beginDate' value='"+beginDate+"' /> <br />" +
+				"Do: <input type='text' name='endDate' value='"+endDate+"' /> <br />" +
 				"Jaka czestotliwosc?:<br />" +
 				"<input type='radio' name='frequency' value='Codziennie'> Codziennie<br>" + 
 				"<input type='radio' name='frequency' value='Tygodniowo'> Tygodniowo<br>" + 

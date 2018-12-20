@@ -13,6 +13,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.ug.pzurawska.domain.Horse;
 import com.ug.pzurawska.service.StorageService;
@@ -26,7 +27,7 @@ public class ShowNewsLetter extends HttpServlet{
 			throws ServletException, IOException {
 		
 		response.setContentType("text/html");
-		
+		HttpSession session = request.getSession();
 		PrintWriter out = response.getWriter();
 		
 		if(request.getParameter("name")!=null &&  request.getParameter("surname")!=null && request.getParameter("beginDate")!=null && request.getParameter("endDate")!=null && request.getParameter("frequency")!=null)
@@ -36,6 +37,7 @@ public class ShowNewsLetter extends HttpServlet{
 			DateFormat formatter = new SimpleDateFormat("yyyy-mm-dd");
 			Date beginDate = null;
 			Date endDate = null;
+			String magazine="";
 			try {
 				beginDate = formatter.parse(request.getParameter("beginDate"));
 			} catch (ParseException e) {
@@ -49,28 +51,32 @@ public class ShowNewsLetter extends HttpServlet{
 			}
 			String frequency = request.getParameter("frequency");
 	
-			User person = new User(name,surname,beginDate,endDate,frequency);
+			
 			
 			if(request.getParameter("newsLetter01")!=null)
 			{
-				person.addMagazineToList(request.getParameter("newsLetter01"));
+				magazine+=request.getParameter("newsLetter01")+" ";
 			}
 			
 			if(request.getParameter("newsLetter02")!=null)
 			{
-				person.addMagazineToList(request.getParameter("newsLetter02"));
+				magazine+=request.getParameter("newsLetter02")+" ";
 			}
 			if(request.getParameter("newsLetter03")!=null)
 			{
-				person.addMagazineToList(request.getParameter("newsLetter03"));
+				magazine+=request.getParameter("newsLetter03")+" ";
 			}
 			if(request.getParameter("newsLetter04")!=null)
 			{
-				person.addMagazineToList(request.getParameter("newsLetter04"));
+				magazine+=request.getParameter("newsLetter04")+" ";
 			}
+			User person = new User(name,surname,beginDate,endDate,frequency,magazine);
 			
 			StorageService ss = (StorageService) getServletContext().getAttribute("storage_service");
 			ss.addUser(person);
+			
+			
+			session.setAttribute("sess_news", person);
 	
 			List<User> allUsers = ss.getAllUsers();
 			List<String> magazines;
@@ -83,12 +89,8 @@ public class ShowNewsLetter extends HttpServlet{
 				out.append("<p>Data poczatkowa: " + user.getBeginDate() + "</p>");
 				out.append("<p>Data koncowa: " + user.getEndDate() + "</p>");
 				out.append("<p>Czestotliwosc: " + user.getFrequency() + "</p>");
-				out.append("<p>Magazyny:</p>");
-				magazines = user.getMagazine();
-				for(String magazine: magazines)
-				{
-					out.append("<p> " + magazine + "</p>");
-				}
+				out.append("<p>Magazyny: "+ user.getMagazine() +"</p>");
+				
 				
 				
 				out.append("----------------------------------------------------------------------------------<br>");
@@ -110,11 +112,7 @@ public class ShowNewsLetter extends HttpServlet{
 				out.append("<p>Data koncowa: " + user.getEndDate() + "</p>");
 				out.append("<p>Czestotliwosc: " + user.getFrequency() + "</p>");
 				out.append("<p>Magazyny:</p>");
-				magazines = user.getMagazine();
-				for(String magazine: magazines)
-				{
-					out.append("<p>" + magazine + "</p>");
-				}
+				out.append("<p>Magazyny: "+ user.getMagazine() +"</p>");
 				
 				
 				out.append("----------------------------------------------------------------------------------<br>");

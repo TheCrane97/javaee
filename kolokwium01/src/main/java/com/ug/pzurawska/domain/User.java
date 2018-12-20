@@ -11,17 +11,18 @@ public class User {
 	private Date beginDate;
 	private Date endDate;
 	String frequency;
-	private List<String> magazine = new ArrayList<String>();
+	private String magazine;
 	
 	
 	
-	public User(String name,String surname, Date beginDate, Date endDate,String frequency) {
+	public User(String name,String surname, Date beginDate, Date endDate,String frequency,String magazine) {
 		super();
 		this.name=name;
 		this.surname = surname;
 		this.beginDate = beginDate;
 		this.endDate = endDate;
 		this.frequency=frequency;
+		this.magazine=magazine;
 	}
 	
 	
@@ -62,17 +63,13 @@ public class User {
 	public void setEndDate(Date endDate) {
 		this.endDate = endDate;
 	}
-	public List<String> getMagazine() {
+	public String getMagazine() {
 		return magazine;
 	}
-	public void setMagazine(List<String> magazine) {
+	public void setMagazine(String magazine) {
 		this.magazine = magazine;
 	}
-	
-	public void addMagazineToList(String magazine)
-	{
-		this.magazine.add(magazine);
-	}
+
 	
 	
 }
