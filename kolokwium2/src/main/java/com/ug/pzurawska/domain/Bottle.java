@@ -8,17 +8,17 @@ public class Bottle {
 	private Date dataProdukcji=new Date();
 	private double pojemnosc=0.0;
 	private String coWsrodku="";
-	private boolean pekniete;
+	private String naklejki="";
 	
 	
 	
-	public Bottle(String nazwa, Date dataProdukcji, double pojemnosc, String coWsrodku, boolean pekniete) {
+	public Bottle(String nazwa, Date dataProdukcji, double pojemnosc, String coWsrodku, String naklkejki) {
 		super();
 		this.nazwa = nazwa;
 		this.dataProdukcji = dataProdukcji;
 		this.pojemnosc = pojemnosc;
 		this.coWsrodku = coWsrodku;
-		this.pekniete = pekniete;
+		this.naklejki = naklejki;
 	}
 
 	public Bottle() {}
@@ -71,14 +71,14 @@ public class Bottle {
 
 
 
-	public boolean isPekniete() {
-		return pekniete;
+	public String getNaklejki() {
+		return naklejki;
 	}
 
 
 
-	public void setPekniete(boolean pekniete) {
-		this.pekniete = pekniete;
+	public void setNaklejki(String naklejki) {
+		this.naklejki = naklejki;
 	}
 	
 	

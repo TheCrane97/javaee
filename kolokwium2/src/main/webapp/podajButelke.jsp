@@ -23,15 +23,15 @@
 					out.print(df.format(dane.getDataProdukcji()));}
 				else
 					out.print(df.format(new java.util.Date()));%>'/></br>
-		
+				Pojemnosc(np: 0.5): <input type="number" name="pojemnosc" value="${dane.pojemnosc}" > <br>
 		 		Co sie w niej znajduje?:<br />
 				<input type="radio" name="coWsrodku" value="sok" <% if(dane.getCoWsrodku().equals("sok")){out.println("checked");}%>> Codziennie<br> 
 				<input type="radio" name="coWsrodku" value="nektar" <% if(dane.getCoWsrodku().equals("nektar")){out.println("checked");}%>> Tygodniowo<br> 
 				<input type="radio" name="coWsrodku" value="woda" <% if(dane.getCoWsrodku().equals("woda")){out.println("checked");}%>> Miesiecznie<br>
-				Ktore magazyny wybierasz?<br />
-				<input type="checkbox" name="magazyny01" value="Konie" <% if(dane.getMagazyny().contains("Konie")){out.println("checked");}%>> Konie<br>
-				<input type="checkbox" name="magazyny02" value="Psy" <% if(dane.getMagazyny().contains("Psy")){out.println("checked");}%>> Psy<br>
-				<input type="checkbox" name="magazyny03" value="Koty" <% if(dane.getMagazyny().contains("Koty")){out.println("checked");}%>> Koty<br>
+				Co dodac na butelke?<br />
+				<input type="checkbox" name="naklejki01" value="naklejki z owocami" <% if(dane.getNaklejki().contains("naklejki z owocami")){out.println("checked");}%>> naklejki z owocami<br>
+				<input type="checkbox" name="naklejki02" value="naklejki z drzewami" <% if(dane.getNaklejki().contains("naklejki z drzewami")){out.println("checked");}%>> naklejki z drzewami<br>
+				<input type="checkbox" name="naklejki03" value="naklejki z warzywami" <% if(dane.getNaklejki().contains("naklejki z warzywami")){out.println("checked");}%>> naklejki z warzywami<br>
 				<input type="submit" value=" Zamawiam " /><br/>
 </form>
 
