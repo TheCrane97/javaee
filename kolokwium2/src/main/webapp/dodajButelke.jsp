@@ -61,7 +61,7 @@ dane.setNazwa(request.getParameter("nazwa"));
 	
 	
 	%>
-
+<br>
 <a href="index.jsp" >Start</a>
 
 

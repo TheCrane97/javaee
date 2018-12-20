@@ -35,7 +35,7 @@
 		out.println("---------------------------"+"<br>");
 	}
 %>
-
+<br>
 <a href="index.jsp" >Start</a>
 </body>
 </html>
