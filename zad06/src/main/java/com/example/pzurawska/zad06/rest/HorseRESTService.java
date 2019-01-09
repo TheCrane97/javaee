@@ -19,11 +19,15 @@ import com.example.pzurawska.zad06.service.HorseManager;
 
 
 @Path("horse")
-@Stateless
-
-
 public class HorseRESTService {
 	
+	
+	
+	
+	
+	
+	
+	/*
 	@Inject
 	private HorseManager hm;
 
@@ -58,6 +62,6 @@ public class HorseRESTService {
 	public Response clearPersons() {
 		hm.deleteAllHorses();
 		return Response.status(200).build();
-	}
+	}*/
 
 }

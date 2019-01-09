@@ -1,20 +1,43 @@
 package com.example.pzurawska.zad06.service;
 
-import java.util.ArrayList;
-import java.util.Collections;
+
 import java.util.List;
 
-import javax.ejb.Singleton;
+import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 
 import com.example.pzurawska.zad06.domain.Horse;
 
 
-@Singleton
+@Stateless
 public class HorseManager {
 	
-	private List<Horse> db = Collections.synchronizedList(new ArrayList<>());
+	@PersistenceContext
+	EntityManager em;
+	
+	
+	public void addHorse(Horse horse){	
+		em.persist(horse);
+	}
+	
+	public Horse getHorse(Long id){
+		Horse retrieved = em.find(Horse.class, id);
+		return retrieved;
+	}
 
-	public void addHorse(Horse horse) {
+	
+	@SuppressWarnings("unchecked")
+	public List<Horse> getAll(){
+		return em.createNamedQuery("horse.getAll").getResultList();
+	}
+	
+	
+	public void deletAll(){
+		em.createNamedQuery("horse.deleteAll").executeUpdate();
+	}
+
+	/*public void addHorse(Horse horse) {
 		db.add(horse);
 	}
 
@@ -39,6 +62,6 @@ public class HorseManager {
 	
 	public void deleteAllHorses(){
 		db.clear();
-	}
+	}*/
 	
 }

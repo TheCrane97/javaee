@@ -13,7 +13,8 @@ import java.util.List;
 @Entity
 @NamedQueries({
         @NamedQuery(name = "horse.getAll", query = "Select h from Horse h"),
-        @NamedQuery(name = "plane.deleteAll", query="Delete from Horse ")
+        @NamedQuery(name = "horse.deleteAll", query="Delete from Horse "),
+        @NamedQuery(name = "horse.getHorsesByOwnerName", query="Delete from Horse ")
 })
 public class Horse {
 	
