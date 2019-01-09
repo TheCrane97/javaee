@@ -1,4 +1,4 @@
-package com.example.pzurawska.zad05.rest;
+package com.example.pzurawska.zad06.rest;
 
 import java.util.List;
 
@@ -14,8 +14,8 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-import com.example.pzurawska.zad05.domain.Horse;
-import com.example.pzurawska.zad05.service.HorseManager;
+import com.example.pzurawska.zad06.domain.Horse;
+import com.example.pzurawska.zad06.service.HorseManager;
 
 
 @Path("horse")

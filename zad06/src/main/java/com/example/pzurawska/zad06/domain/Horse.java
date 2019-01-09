@@ -1,25 +1,33 @@
-package com.example.pzurawska.zad05.domain;
+package com.example.pzurawska.zad06.domain;
 
+import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
-
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @XmlRootElement
+@Entity
+@NamedQueries({
+        @NamedQuery(name = "horse.getAll", query = "Select h from Horse h"),
+        @NamedQuery(name = "plane.deleteAll", query="Delete from Horse ")
+})
 public class Horse {
 	
+	private int id;
 	private String name;
 	private String race;
 	private Date dateOfBirth;
 	private boolean doesSick;
 	private double weight;
-	
+
+    
 	public Horse(){}
 	
 	public Horse(String name, String race, Date dateOfBirth, boolean doesSick, double weight) {
-		super();
 		this.name = name;
 		this.race = race;
 		this.dateOfBirth = dateOfBirth;
@@ -29,7 +37,6 @@ public class Horse {
 	
 	
 	public Horse(String name, String race, String date, boolean doesSick, double weight) {
-		super();
 		this.name = name;
 		this.race = race;
 		this.doesSick = doesSick;
@@ -43,6 +50,16 @@ public class Horse {
 			e.printStackTrace();
 		}
 	}
+	
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
 	public String getName() {
 		return name;

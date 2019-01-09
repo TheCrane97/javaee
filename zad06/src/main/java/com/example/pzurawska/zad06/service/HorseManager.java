@@ -1,4 +1,4 @@
-package com.example.pzurawska.zad05.service;
+package com.example.pzurawska.zad06.service;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -6,7 +6,7 @@ import java.util.List;
 
 import javax.ejb.Singleton;
 
-import com.example.pzurawska.zad05.domain.Horse;
+import com.example.pzurawska.zad06.domain.Horse;
 
 
 @Singleton

@@ -1,4 +1,4 @@
-package com.example.pzurawska.zad05.config;
+package com.example.pzurawska.zad06.config;
 
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
