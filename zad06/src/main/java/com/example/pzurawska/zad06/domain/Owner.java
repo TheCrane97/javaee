@@ -11,23 +11,24 @@ import javax.xml.bind.annotation.XmlRootElement;
 @Entity
 @NamedQueries({
         @NamedQuery(name = "owner.getAll", query = "Select o from Owner o"),
-        @NamedQuery(name = "owner.deleteAll", query="Delete from Owner ")
+        @NamedQuery(name = "owner.deleteAll", query="Delete from Owner "),
+        @NamedQuery(name = "owner.getHorsesOfOwner", query="Select o.horses from Owner o where o.firstname=:firstname")
 })
 public class Owner {
 	
 	private int id;
-	private String name;
-	private String surname;
+	private String firstname;
+	private String lastname;
 	
 	private List<Horse> horses = new ArrayList<>();
 	
 	
 	public Owner() {}
 	
-	public Owner(String name,String surname)
+	public Owner(String firstname,String lastname)
 	{
-		this.name=name;
-		this.surname=surname;
+		this.firstname=firstname;
+		this.lastname=lastname;
 	}
 
 	@Id
@@ -40,20 +41,20 @@ public class Owner {
 		this.id = id;
 	}
 
-	public String getName() {
-		return name;
+	public String getFirstname() {
+		return firstname;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setFirstname(String firstname) {
+		this.firstname = firstname;
 	}
 
-	public String getSurname() {
-		return surname;
+	public String getLastname() {
+		return lastname;
 	}
 
-	public void setSurname(String surname) {
-		this.surname = surname;
+	public void setLastname(String lastname) {
+		this.lastname = lastname;
 	}
 	
 	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
