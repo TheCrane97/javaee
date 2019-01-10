@@ -5,6 +5,7 @@ import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.*;
 
+import com.example.pzurawska.zad06.domain.Horse;
 import com.example.pzurawska.zad06.domain.Owner;
 
 
@@ -30,6 +31,11 @@ public class OwnerManager {
 	@SuppressWarnings("unchecked")
 	public List<Owner> getAll(){
 		return em.createNamedQuery("owner.getAll").getResultList();
+	}
+	
+	@SuppressWarnings("unchecked")
+	public List<Horse> getHorsesOfOwner(){
+		return em.createNamedQuery("owner.getHorsesOfOwner").getResultList();
 	}
 	
 	
