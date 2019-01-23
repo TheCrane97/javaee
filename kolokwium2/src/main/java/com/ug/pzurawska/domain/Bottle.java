@@ -4,6 +4,8 @@ import java.util.Date;
 
 public class Bottle {
 	
+	private static int licznik=0;
+	private long id;
 	private String nazwa="";
 	private Date dataProdukcji=new Date();
 	private double pojemnosc=0.0;
@@ -14,6 +16,7 @@ public class Bottle {
 	
 	public Bottle(String nazwa, Date dataProdukcji, double pojemnosc, String coWsrodku, String naklejki) {
 		super();
+		this.id=licznik++;
 		this.nazwa = nazwa;
 		this.dataProdukcji = dataProdukcji;
 		this.pojemnosc = pojemnosc;
@@ -23,6 +26,16 @@ public class Bottle {
 
 	public Bottle() {}
 
+	
+	public long getId() {
+		return id;
+	}
+	
+	public void setId(long id) {
+		this.id = id;
+	}
+	
+	
 	public String getNazwa() {
 		return nazwa;
 	}

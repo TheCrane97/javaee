@@ -12,7 +12,7 @@ Menu: <br>
 	                <ul> 
 	                <li><a href='podajButelke.jsp'>Dodaj Butelke</a></li>
 	                <li><a href='wyswietlBaze.jsp'>Wyswietl wszystko</a></li>
-	                <li><a href='wyswietlKoszyk.jsp'>Koszyk</a></li>
+	                <li><a href='dodajDoKoszyka.jsp'>Koszyk</a></li>
 	                </ul>
 
 

@@ -13,11 +13,14 @@
 </head>
 <jsp:useBean id="wszystkieDane" class="com.ug.pzurawska.service.StorageService" scope="application"/>
 <body>
+
+<h1>Baza danych</h1>
+
 <%
 	for(Bottle news:wszystkieDane.GetAll())
 	{	
 		%>
-		<form action="wyswietlKoszyk.jsp">
+		<form action="dodajDoKoszyka.jsp" >
 		
 		<%
 		out.println("Nazwa:"+news.getNazwa()+"<br>");
@@ -25,9 +28,10 @@
 		out.println("Pojemnosc:"+news.getPojemnosc()+"<br>");
 		out.println("Co jest w srodku:"+news.getCoWsrodku()+"<br>");
 		out.println("Naklejki:"+news.getNaklejki()+"<br>");
-		
+		out.println("<input name='id' hidden value='" + news.getId() + "'/>");
+		out.println("<input type='submit' value='Dodaj do koszyka!'/>");
 		%>
-		<button type="submit" name="nazwa" value="${news.getNazwa()}">Dodaj do koszyka!</button>
+	
 		</form>
 		
 		
