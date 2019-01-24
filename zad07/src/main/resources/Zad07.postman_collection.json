@@ -1,0 +1,809 @@
+{
+	"info": {
+		"_postman_id": "487708af-5e3a-40b2-a432-1e11d267f84d",
+		"name": "Zad07",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Rasa",
+			"item": [
+				{
+					"name": "Dodawanie Rasy",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nazwa\": \"jeszcze jedna\",\n\t\"opis\": \"super fajna rasa\"\n\t\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/zad07/api/rasa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"zad07",
+								"api",
+								"rasa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Wyswietlanie konkretnej rasy",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nazwa\": \"jakas nowa\",\n\t\"opis\": \"super fajna rasa\"\n\t\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/zad07/api/rasa/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"zad07",
+								"api",
+								"rasa",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Wyswietlania wszystkich ras",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"identyfikator\": \"15S56A45D\"\n\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/zad07/api/rasa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"zad07",
+								"api",
+								"rasa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update rasy",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nazwa\": \"pierwsza\",\n\t\"opis\": \"super fajna rasa\"\n\t\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/zad07/api/rasa/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"zad07",
+								"api",
+								"rasa",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Usuwanie konkretnej rasy",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nazwa\": \"jakas nowa\",\n\t\"opis\": \"super fajna rasa\"\n\t\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/zad07/api/rasa/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"zad07",
+								"api",
+								"rasa",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Usuniecie wszystkich ras",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nazwa\": \"jakas nowa\",\n\t\"opis\": \"super fajna rasa\"\n\t\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/zad07/api/rasa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"zad07",
+								"api",
+								"rasa"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Identyfikator",
+			"item": [
+				{
+					"name": "Dodawanie identyfikatora",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"identyfikator\": \"1368D\"\n\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/zad07/api/identyfikator",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"zad07",
+								"api",
+								"identyfikator"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Wyswietlanie konkretnego identyfikatora",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"identyfikator\": \"15S56A45D\"\n\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/zad07/api/identyfikator/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"zad07",
+								"api",
+								"identyfikator",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Wyswietlanie wszystkich identyfikatorow",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"identyfikator\": \"15S56A45D\"\n\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/zad07/api/identyfikator",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"zad07",
+								"api",
+								"identyfikator"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update identyfikatora",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"identyfikator\": \"12D\"\n\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/zad07/api/identyfikator/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"zad07",
+								"api",
+								"identyfikator",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Usuwanie konkretnego identyfikatora",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nazwa\": \"jakas nowa\",\n\t\"opis\": \"super fajna rasa\"\n\t\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/zad07/api/identyfikator/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"zad07",
+								"api",
+								"identyfikator",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Usuwanie wszystkich identyfikatorow",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nazwa\": \"jakas nowa\",\n\t\"opis\": \"super fajna rasa\"\n\t\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/zad07/api/identyfikator",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"zad07",
+								"api",
+								"identyfikator"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Kon",
+			"item": [
+				{
+					"name": "Dodawanie konia",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"imie\": \"Fafio\",\n\t\"rokUrodzenia\": \"2010-10-10\" ,\n\t\"czyChory\": false,\n\t\"waga\": 615.25,\n    \"rasa\": {\"id\": 5},\n    \"identyfikator\": {\"id\": 6},\n    \"wlasciciel\": []\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/zad07/api/kon",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"zad07",
+								"api",
+								"kon"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Wyswietlanie konkretnego konia",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"imie\": \"Fafik\",\n\t\"rokUrodzenia\": \"2010-10-10\" ,\n\t\"czyChory\": false,\n\t\"waga\": 615.25,\n    \"rasa\": {\"id\": 4},\n    \"identyfikator\": {\"id\": 4},\n    \"wlasciciel\": [{\"id\": 1}]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/zad07/api/kon/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"zad07",
+								"api",
+								"kon",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Wyswietlanie wszystkich koni",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"imie\": \"Fafik\",\n\t\"rokUrodzenia\": \"2010-10-10\" ,\n\t\"czyChory\": false,\n\t\"waga\": 615.25,\n    \"rasa\": {\"id\": 4},\n    \"identyfikator\": {\"id\": 4},\n    \"wlasciciel\": [{\"id\": 1}]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/zad07/api/kon",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"zad07",
+								"api",
+								"kon"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update konia",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"imie\": \"Fafik\",\n\t\"rokUrodzenia\": \"2010-10-10\" ,\n\t\"czyChory\": true,\n\t\"waga\": 615.25,\n    \"rasa\": {\"id\": 4},\n    \"identyfikator\": {\"id\": 4},\n    \"wlasciciel\": [{\"id\": 1}]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/zad07/api/kon/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"zad07",
+								"api",
+								"kon",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Usuniecie konkretnego konia",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"imie\": \"Fafio\",\n\t\"rokUrodzenia\": \"2010-10-10\" ,\n\t\"czyChory\": false,\n\t\"waga\": 615.25,\n    \"rasa\": {\"id\": 5},\n    \"identyfikator\": {\"id\": 6},\n    \"wlasciciel\": [{\"id\": 2}]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/zad07/api/kon/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"zad07",
+								"api",
+								"kon",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Usuniecie wszystkich koni",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"imie\": \"Fafio\",\n\t\"rokUrodzenia\": \"2010-10-10\" ,\n\t\"czyChory\": false,\n\t\"waga\": 615.25,\n    \"rasa\": {\"id\": 5},\n    \"identyfikator\": {\"id\": 6},\n    \"wlasciciel\": [{\"id\": 2}]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/zad07/api/kon",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"zad07",
+								"api",
+								"kon"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Wlasciciel",
+			"item": [
+				{
+					"name": "Dodawanie wlasciciela",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"imie\": \"Janik\",\n\t\"nazwisko\": \"Kowalski\" ,\n    \"kon\": [{\"id\": 2}]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/zad07/api/wlasciciel",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"zad07",
+								"api",
+								"wlasciciel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Wyswietlanie wszystkich wlascicieli",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"imie\": \"Janik\",\n\t\"nazwisko\": \"Kowalski\" ,\n    \"kon\": [{\"id\": 2}]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/zad07/api/wlasciciel",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"zad07",
+								"api",
+								"wlasciciel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Wyswietlenie konkretnego wlasciciela",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"imie\": \"Janik\",\n\t\"nazwisko\": \"Kowalski\" ,\n    \"kon\": [{\"id\": 2}]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/zad07/api/wlasciciel/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"zad07",
+								"api",
+								"wlasciciel",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update wlasciciela",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"imie\": \"Janik\",\n\t\"nazwisko\": \"Nowak\" ,\n    \"kon\": [{\"id\": 2}]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/zad07/api/wlasciciel/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"zad07",
+								"api",
+								"wlasciciel",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Usniece konkretnego wlasciciela",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"imie\": \"Janik\",\n\t\"nazwisko\": \"Nowak\" ,\n    \"kon\": [{\"id\": 2}]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/zad07/api/wlasciciel/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"zad07",
+								"api",
+								"wlasciciel",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Usuniecie wszystkich wlascicieli",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"imie\": \"Janik\",\n\t\"nazwisko\": \"Nowak\" ,\n    \"kon\": [{\"id\": 2}]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/zad07/api/wlasciciel",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"zad07",
+								"api",
+								"wlasciciel"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
