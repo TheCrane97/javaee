@@ -15,58 +15,58 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-import com.example.pzurawska.zad07.domain.Kon;
-import com.example.pzurawska.zad07.service.KonManager;
+import com.example.pzurawska.zad07.domain.Horse;
+import com.example.pzurawska.zad07.service.HorseManager;
 
 
-@Path("kon")
+@Path("horse")
 @Stateless
-public class KonRESTService {
+public class HorseRESTService {
 	
 	@Inject
-	private KonManager mm;
+	private HorseManager mm;
 	
 	@GET
-	@Path("/{konId}")
+	@Path("/{horseId}")
 	@Produces(MediaType.APPLICATION_JSON)
-	public Kon getKon(@PathParam("konId") int id) {
-		return mm.getKon(id);
+	public Horse getHorse(@PathParam("horseId") int id) {
+		return mm.getHorse(id);
 	}
 	
 	
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
-	public List<Kon> getKon() {
-		return mm.getAllKon();
+	public List<Horse> getHorse() {
+		return mm.getAllHorses();
 	}
 	
 	
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
-	public Response addKon(Kon kon) {
-		mm.addKon(kon);
-		return Response.status(Response.Status.CREATED).entity("Kon").build();
+	public Response addHorse(Horse horse) {
+		mm.addHorse(horse);
+		return Response.status(Response.Status.CREATED).entity("horse").build();
 	}
 	
 	@PUT
-	@Path("/{konId}")
+	@Path("/{horseId}")
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
-	public Kon updateKon(@PathParam("konId") int id, Kon kon) {
-		return mm.updateKon(kon, id);
+	public Horse updateHorse(@PathParam("horseId") int id, Horse horse) {
+		return mm.updateHorse(horse, id);
 	}
 	
 	
 	@DELETE
-	public Response clearKon() {
-		mm.deleteAllKon();
+	public Response clearHorses() {
+		mm.deleteAllHorses();
 		return Response.status(Response.Status.OK).build();
 	}
 
 	@DELETE
-	@Path("/{konId}")
-	public Response deleteMotocykl(@PathParam("konId") int id) {
-		mm.deleteKon(id);
+	@Path("/{horseId}")
+	public Response deleteHorse(@PathParam("horseId") int id) {
+		mm.deleteHorse(id);
 		return Response.status(200).build();
 	}
 

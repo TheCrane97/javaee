@@ -8,24 +8,23 @@ import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.xml.bind.annotation.XmlRootElement;
 
+
 @XmlRootElement
 @Entity
 @NamedQueries({
-        @NamedQuery(name = "identyfikator.getAll", query = "Select i from Identyfikator i"),
-        @NamedQuery(name = "identyfikator.deleteAll", query="Delete from Identyfikator "),
+        @NamedQuery(name = "race.getAll", query = "Select r from Race r"),
+        @NamedQuery(name = "race.deleteAll", query="Delete from Race "),
 
 })
-public class Identyfikator {
+public class Race {
 	
 	private int id;
-	private String identyfikator;
+	private String name;
+	private String description;
 	
 	
-
-
-
-
-	@Id
+	
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public int getId() {
         return id;
@@ -34,14 +33,26 @@ public class Identyfikator {
     public void setId(int id) {
         this.id = id;
     }
-    
-	public String getIdentyfikator() {
-		return identyfikator;
-	}
-	public void setIdentyfikator(String identyfikator) {
-		this.identyfikator = identyfikator;
-	}
-	
 	
 
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	
+	
+	
 }

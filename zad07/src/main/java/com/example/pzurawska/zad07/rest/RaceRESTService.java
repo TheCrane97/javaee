@@ -17,58 +17,58 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-import com.example.pzurawska.zad07.domain.Rasa;
-import com.example.pzurawska.zad07.service.RasaManager;
+import com.example.pzurawska.zad07.domain.Race;
+import com.example.pzurawska.zad07.service.RaceManager;
 
 
 
-@Path("rasa")
+@Path("race")
 @Stateless
-public class RasaRESTService {
+public class RaceRESTService {
 	
 
 	@Inject
-	private RasaManager pm;	
+	private RaceManager pm;	
 	
 	@GET
-	@Path("/{rasaId}")
+	@Path("/{raceId}")
 	@Produces(MediaType.APPLICATION_JSON)
-	public Rasa getProducer(@PathParam("rasaId") int id) {
-		return pm.getRasa(id);
+	public Race getRace(@PathParam("raceId") int id) {
+		return pm.getRace(id);
 	}
 
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
-	public List<Rasa> getRasa() {
-		return pm.getAllRasa();
+	public List<Race> getRace() {
+		return pm.getAllRace();
 	}
 
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
-	public Response addRasa(Rasa rasa) {
-		pm.addRasa(rasa);
-		return Response.status(Response.Status.CREATED).entity("Rasa").build();
+	public Response addRace(Race race) {
+		pm.addRace(race);
+		return Response.status(Response.Status.CREATED).entity("Race").build();
 	}
 
 	@PUT
-	@Path("/{rasaId}")
+	@Path("/{raceId}")
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
-	public Rasa updateRasa(@PathParam("rasaId") int id, Rasa rasa) {
-		return pm.updateRasa(rasa, id);
+	public Race updateRace(@PathParam("raceId") int id, Race race) {
+		return pm.updateRace(race, id);
 	}
 
 
 	@DELETE
-	public Response clearProducers() {
-		pm.deleteAllRasa();
+	public Response clearRaces() {
+		pm.deleteAllRace();
 		return Response.status(Response.Status.OK).build();
 	}
 
 	@DELETE
-	@Path("/{rasaId}")
-	public Response deleteRasa(@PathParam("rasaId") int id) {
-		pm.deleteRasa(id);
+	@Path("/{raceId}")
+	public Response deleteRace(@PathParam("raceId") int id) {
+		pm.deleteRace(id);
 		return Response.status(200).build();
 	}
 }

@@ -21,10 +21,10 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"nazwa\": \"jeszcze jedna\",\n\t\"opis\": \"super fajna rasa\"\n\t\n}"
+							"raw": "{\n\t\"name\": \"ha\",\n\t\"description\": \"super fajna rasa\"\n\t\n}"
 						},
 						"url": {
-							"raw": "http://localhost:8080/zad07/api/rasa",
+							"raw": "http://localhost:8080/zad07/api/race",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -33,7 +33,7 @@
 							"path": [
 								"zad07",
 								"api",
-								"rasa"
+								"race"
 							]
 						}
 					},
@@ -58,7 +58,7 @@
 							"raw": "{\n\t\"nazwa\": \"jakas nowa\",\n\t\"opis\": \"super fajna rasa\"\n\t\n}"
 						},
 						"url": {
-							"raw": "http://localhost:8080/zad07/api/rasa/1",
+							"raw": "http://localhost:8080/zad07/api/race/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -67,7 +67,7 @@
 							"path": [
 								"zad07",
 								"api",
-								"rasa",
+								"race",
 								"1"
 							]
 						}
@@ -93,7 +93,7 @@
 							"raw": "{\n\t\"identyfikator\": \"15S56A45D\"\n\n}"
 						},
 						"url": {
-							"raw": "http://localhost:8080/zad07/api/rasa",
+							"raw": "http://localhost:8080/zad07/api/race",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -102,7 +102,7 @@
 							"path": [
 								"zad07",
 								"api",
-								"rasa"
+								"race"
 							]
 						}
 					},
@@ -121,10 +121,10 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"nazwa\": \"pierwsza\",\n\t\"opis\": \"super fajna rasa\"\n\t\n}"
+							"raw": "{\n\t\"name\": \"druga\",\n\t\"description\": \"super fajna rasa\"\n\t\n}"
 						},
 						"url": {
-							"raw": "http://localhost:8080/zad07/api/rasa/1",
+							"raw": "http://localhost:8080/zad07/api/race/2",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -133,8 +133,8 @@
 							"path": [
 								"zad07",
 								"api",
-								"rasa",
-								"1"
+								"race",
+								"2"
 							]
 						}
 					},
@@ -156,7 +156,7 @@
 							"raw": "{\n\t\"nazwa\": \"jakas nowa\",\n\t\"opis\": \"super fajna rasa\"\n\t\n}"
 						},
 						"url": {
-							"raw": "http://localhost:8080/zad07/api/rasa/3",
+							"raw": "http://localhost:8080/zad07/api/race/2",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -165,8 +165,8 @@
 							"path": [
 								"zad07",
 								"api",
-								"rasa",
-								"3"
+								"race",
+								"2"
 							]
 						}
 					},
@@ -188,7 +188,7 @@
 							"raw": "{\n\t\"nazwa\": \"jakas nowa\",\n\t\"opis\": \"super fajna rasa\"\n\t\n}"
 						},
 						"url": {
-							"raw": "http://localhost:8080/zad07/api/rasa",
+							"raw": "http://localhost:8080/zad07/api/race",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -197,7 +197,7 @@
 							"path": [
 								"zad07",
 								"api",
-								"rasa"
+								"race"
 							]
 						}
 					},
@@ -221,10 +221,10 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"identyfikator\": \"1368D\"\n\n}"
+							"raw": "\t{\n\t\t\"identity\": \"1AS\"\n\t\n\t}"
 						},
 						"url": {
-							"raw": "http://localhost:8080/zad07/api/identyfikator",
+							"raw": "http://localhost:8080/zad07/api/identity",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -233,7 +233,7 @@
 							"path": [
 								"zad07",
 								"api",
-								"identyfikator"
+								"identity"
 							]
 						}
 					},
@@ -258,7 +258,7 @@
 							"raw": "{\n\t\"identyfikator\": \"15S56A45D\"\n\n}"
 						},
 						"url": {
-							"raw": "http://localhost:8080/zad07/api/identyfikator/1",
+							"raw": "http://localhost:8080/zad07/api/identity/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -267,7 +267,7 @@
 							"path": [
 								"zad07",
 								"api",
-								"identyfikator",
+								"identity",
 								"1"
 							]
 						}
@@ -293,7 +293,7 @@
 							"raw": "{\n\t\"identyfikator\": \"15S56A45D\"\n\n}"
 						},
 						"url": {
-							"raw": "http://localhost:8080/zad07/api/identyfikator",
+							"raw": "http://localhost:8080/zad07/api/identity",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -302,7 +302,7 @@
 							"path": [
 								"zad07",
 								"api",
-								"identyfikator"
+								"identity"
 							]
 						}
 					},
@@ -321,10 +321,10 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"identyfikator\": \"12D\"\n\n}"
+							"raw": "{\n\t\"identity\": \"6\"\n\n}"
 						},
 						"url": {
-							"raw": "http://localhost:8080/zad07/api/identyfikator/4",
+							"raw": "http://localhost:8080/zad07/api/identity/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -333,8 +333,8 @@
 							"path": [
 								"zad07",
 								"api",
-								"identyfikator",
-								"4"
+								"identity",
+								"1"
 							]
 						}
 					},
@@ -356,7 +356,7 @@
 							"raw": "{\n\t\"nazwa\": \"jakas nowa\",\n\t\"opis\": \"super fajna rasa\"\n\t\n}"
 						},
 						"url": {
-							"raw": "http://localhost:8080/zad07/api/identyfikator/3",
+							"raw": "http://localhost:8080/zad07/api/identity/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -365,8 +365,8 @@
 							"path": [
 								"zad07",
 								"api",
-								"identyfikator",
-								"3"
+								"identity",
+								"1"
 							]
 						}
 					},
@@ -388,7 +388,7 @@
 							"raw": "{\n\t\"nazwa\": \"jakas nowa\",\n\t\"opis\": \"super fajna rasa\"\n\t\n}"
 						},
 						"url": {
-							"raw": "http://localhost:8080/zad07/api/identyfikator",
+							"raw": "http://localhost:8080/zad07/api/identity",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -397,7 +397,7 @@
 							"path": [
 								"zad07",
 								"api",
-								"identyfikator"
+								"identity"
 							]
 						}
 					},
@@ -421,10 +421,10 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"imie\": \"Fafio\",\n\t\"rokUrodzenia\": \"2010-10-10\" ,\n\t\"czyChory\": false,\n\t\"waga\": 615.25,\n    \"rasa\": {\"id\": 5},\n    \"identyfikator\": {\"id\": 6},\n    \"wlasciciel\": []\n}"
+							"raw": "{\n\t\"name\": \"Maciek\",\n\t\"dateOfBirth\": \"2010-10-10\",\n\t\"sick\": false,\n\t\"weight\": 652.15,\n    \"race\": {\"id\": 2},\n    \"identity\": {\"id\": 2},\n    \"owner\": [{\"id\": 1}]\n}"
 						},
 						"url": {
-							"raw": "http://localhost:8080/zad07/api/kon",
+							"raw": "http://localhost:8080/zad07/api/horse",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -433,7 +433,7 @@
 							"path": [
 								"zad07",
 								"api",
-								"kon"
+								"horse"
 							]
 						}
 					},
@@ -458,7 +458,7 @@
 							"raw": "{\n\t\"imie\": \"Fafik\",\n\t\"rokUrodzenia\": \"2010-10-10\" ,\n\t\"czyChory\": false,\n\t\"waga\": 615.25,\n    \"rasa\": {\"id\": 4},\n    \"identyfikator\": {\"id\": 4},\n    \"wlasciciel\": [{\"id\": 1}]\n}"
 						},
 						"url": {
-							"raw": "http://localhost:8080/zad07/api/kon/3",
+							"raw": "http://localhost:8080/zad07/api/horse/2",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -467,8 +467,8 @@
 							"path": [
 								"zad07",
 								"api",
-								"kon",
-								"3"
+								"horse",
+								"2"
 							]
 						}
 					},
@@ -493,7 +493,7 @@
 							"raw": "{\n\t\"imie\": \"Fafik\",\n\t\"rokUrodzenia\": \"2010-10-10\" ,\n\t\"czyChory\": false,\n\t\"waga\": 615.25,\n    \"rasa\": {\"id\": 4},\n    \"identyfikator\": {\"id\": 4},\n    \"wlasciciel\": [{\"id\": 1}]\n}"
 						},
 						"url": {
-							"raw": "http://localhost:8080/zad07/api/kon",
+							"raw": "http://localhost:8080/zad07/api/horse",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -502,7 +502,7 @@
 							"path": [
 								"zad07",
 								"api",
-								"kon"
+								"horse"
 							]
 						}
 					},
@@ -521,10 +521,10 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"imie\": \"Fafik\",\n\t\"rokUrodzenia\": \"2010-10-10\" ,\n\t\"czyChory\": true,\n\t\"waga\": 615.25,\n    \"rasa\": {\"id\": 4},\n    \"identyfikator\": {\"id\": 4},\n    \"wlasciciel\": [{\"id\": 1}]\n}"
+							"raw": "{\n\t\"name\": \"Fiona\",\n\t\"dateOfBirth\": \"2010-10-10\",\n\t\"sick\": false,\n\t\"weight\": 745.15,\n    \"race\": {\"id\": 1},\n    \"identity\": {\"id\": 1},\n    \"owner\": [{\"id\": 1}]\n}"
 						},
 						"url": {
-							"raw": "http://localhost:8080/zad07/api/kon/3",
+							"raw": "http://localhost:8080/zad07/api/horse/2",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -533,8 +533,8 @@
 							"path": [
 								"zad07",
 								"api",
-								"kon",
-								"3"
+								"horse",
+								"2"
 							]
 						}
 					},
@@ -556,7 +556,7 @@
 							"raw": "{\n\t\"imie\": \"Fafio\",\n\t\"rokUrodzenia\": \"2010-10-10\" ,\n\t\"czyChory\": false,\n\t\"waga\": 615.25,\n    \"rasa\": {\"id\": 5},\n    \"identyfikator\": {\"id\": 6},\n    \"wlasciciel\": [{\"id\": 2}]\n}"
 						},
 						"url": {
-							"raw": "http://localhost:8080/zad07/api/kon/8",
+							"raw": "http://localhost:8080/zad07/api/horse/2",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -565,8 +565,8 @@
 							"path": [
 								"zad07",
 								"api",
-								"kon",
-								"8"
+								"horse",
+								"2"
 							]
 						}
 					},
@@ -588,7 +588,7 @@
 							"raw": "{\n\t\"imie\": \"Fafio\",\n\t\"rokUrodzenia\": \"2010-10-10\" ,\n\t\"czyChory\": false,\n\t\"waga\": 615.25,\n    \"rasa\": {\"id\": 5},\n    \"identyfikator\": {\"id\": 6},\n    \"wlasciciel\": [{\"id\": 2}]\n}"
 						},
 						"url": {
-							"raw": "http://localhost:8080/zad07/api/kon",
+							"raw": "http://localhost:8080/zad07/api/horse",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -597,7 +597,7 @@
 							"path": [
 								"zad07",
 								"api",
-								"kon"
+								"horse"
 							]
 						}
 					},
@@ -621,10 +621,10 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"imie\": \"Janik\",\n\t\"nazwisko\": \"Kowalski\" ,\n    \"kon\": [{\"id\": 2}]\n}"
+							"raw": "{\n\t\"name\": \"Jan\",\n\t\"surname\": \"Kowalski\" ,\n    \"horse\": [{\"id\": 1}]\n}"
 						},
 						"url": {
-							"raw": "http://localhost:8080/zad07/api/wlasciciel",
+							"raw": "http://localhost:8080/zad07/api/owner",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -633,7 +633,7 @@
 							"path": [
 								"zad07",
 								"api",
-								"wlasciciel"
+								"owner"
 							]
 						}
 					},
@@ -658,7 +658,7 @@
 							"raw": "{\n\t\"imie\": \"Janik\",\n\t\"nazwisko\": \"Kowalski\" ,\n    \"kon\": [{\"id\": 2}]\n}"
 						},
 						"url": {
-							"raw": "http://localhost:8080/zad07/api/wlasciciel",
+							"raw": "http://localhost:8080/zad07/api/owner",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -667,7 +667,7 @@
 							"path": [
 								"zad07",
 								"api",
-								"wlasciciel"
+								"owner"
 							]
 						}
 					},
@@ -692,7 +692,7 @@
 							"raw": "{\n\t\"imie\": \"Janik\",\n\t\"nazwisko\": \"Kowalski\" ,\n    \"kon\": [{\"id\": 2}]\n}"
 						},
 						"url": {
-							"raw": "http://localhost:8080/zad07/api/wlasciciel/1",
+							"raw": "http://localhost:8080/zad07/api/owner/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -701,7 +701,7 @@
 							"path": [
 								"zad07",
 								"api",
-								"wlasciciel",
+								"owner",
 								"1"
 							]
 						}
@@ -721,10 +721,10 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"imie\": \"Janik\",\n\t\"nazwisko\": \"Nowak\" ,\n    \"kon\": [{\"id\": 2}]\n}"
+							"raw": "{\n        \"name\": \"Jan\",\n        \"surname\": \"Kowalski\",\n        \"horse\": []\n}"
 						},
 						"url": {
-							"raw": "http://localhost:8080/zad07/api/wlasciciel/2",
+							"raw": "http://localhost:8080/zad07/api/owner/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -733,8 +733,8 @@
 							"path": [
 								"zad07",
 								"api",
-								"wlasciciel",
-								"2"
+								"owner",
+								"1"
 							]
 						}
 					},
@@ -756,7 +756,7 @@
 							"raw": "{\n\t\"imie\": \"Janik\",\n\t\"nazwisko\": \"Nowak\" ,\n    \"kon\": [{\"id\": 2}]\n}"
 						},
 						"url": {
-							"raw": "http://localhost:8080/zad07/api/wlasciciel/2",
+							"raw": "http://localhost:8080/zad07/api/owner/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -765,8 +765,8 @@
 							"path": [
 								"zad07",
 								"api",
-								"wlasciciel",
-								"2"
+								"owner",
+								"1"
 							]
 						}
 					},
@@ -788,7 +788,7 @@
 							"raw": "{\n\t\"imie\": \"Janik\",\n\t\"nazwisko\": \"Nowak\" ,\n    \"kon\": [{\"id\": 2}]\n}"
 						},
 						"url": {
-							"raw": "http://localhost:8080/zad07/api/wlasciciel",
+							"raw": "http://localhost:8080/zad07/api/owner",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -797,7 +797,7 @@
 							"path": [
 								"zad07",
 								"api",
-								"wlasciciel"
+								"owner"
 							]
 						}
 					},
